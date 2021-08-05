@@ -5,7 +5,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="KGIN")
 
     # ===== dataset ===== #
-    parser.add_argument("--dataset", nargs="?", default="last-fm", help="Choose a dataset:[last-fm,amazon-book,alibaba]")
+    parser.add_argument("--dataset", nargs="?", default="amazon-book", help="Choose a dataset:[last-fm,amazon-book,alibaba]")
     parser.add_argument(
         "--data_path", nargs="?", default="data/", help="Input data path."
     )
@@ -37,7 +37,7 @@ def parse_args():
     parser.add_argument('--context_hops', type=int, default=3, help='number of context hops')
 
     # ===== save model ===== #
-    parser.add_argument("--save", type=bool, default=False, help="save model or not")
+    parser.add_argument("--save", type=bool, default=True, help="save model or not")
     parser.add_argument("--out_dir", type=str, default="./weights/", help="output directory for model")
 
     return parser.parse_args()
